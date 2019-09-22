@@ -10,9 +10,9 @@ for ((y=2010; y<=2018; y++))
 do
 	for i in {01..12}
 	do
-		if [ -f "./data/${url}${y}-${i}.csv" ] 
+		if [ -f "./data/${y}-${i}.csv" ] 
 		then
-			echo "ya existe ${url}${y}-${i}.csv"
+			echo "ya existe ${y}-${i}.csv"
     	else
 			wget -P ./data/ "${url}${y}-${i}.csv"
 		fi
