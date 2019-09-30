@@ -1,0 +1,126 @@
+Datasets de interés
+
+1. Desarrollo urbano
+	- Areas de valor ambiental [https://datos.cdmx.gob.mx/explore/dataset/areas-de-valor-ambiental/]: 
+		* Descripción: 6 poligonos de las áreas de valor ambiental y las delegaciones que ocupan
+
+	- Colonias [https://datos.cdmx.gob.mx/explore/dataset/coloniascdmx/]
+		* Descripción: datos geográficos de las colonias de la cdmx
+		* campos: {
+			entidad: constante = 9 (CDMX),
+			colonia,
+			geopoint,
+			geoshape,
+			alcaldía
+		}
+
+	- Alcaldías [https://datos.cdmx.gob.mx/explore/dataset/alcaldias/]
+		* descripcion: 16 datos geográficos de las alcaldías de la cdmx
+		* campos: {
+			nombre,
+			clave_municipal,
+			cve_entidad: constante = 9 (CDMX),
+			cvegeo,
+			geopoint,
+			geoshape
+		}
+
+
+2. Movilidad
+	- Lista de rutas peligrosas identificadas por el operativo Frontera [https://datos.cdmx.gob.mx/explore/dataset/lista-de-rutas-peligrosas-identificadas-por-el-operativo-frontera/]
+		* 6 datos corredor:ruta
+		* campos: {
+			corredor,
+			ruta
+		}
+
+	- Lista de rutas peligrosas [https://datos.cdmx.gob.mx/explore/dataset/lista-de-rutas-peligrosas-identificadas/]
+		*descripción: solo una columna con el nombre de la ruta
+
+	- Histórico de uso de biciestacionamientos [https://datos.cdmx.gob.mx/explore/dataset/historico-de-usos-de-los-biciestacionamientos/]
+		* descripción: nombres de los biciestacionamientos y su uso por año del 2014 al 2019
+
+	*- Incidentes viales reportados por C5 [https://datos.cdmx.gob.mx/explore/dataset/incidentes-viales-c5/]
+		* Descripción: incidentes reportados por el c5 desde el 2014 hasta la fecha, actualizado mensualmente.
+		* campos: {
+			folio int,
+			fecha_creacion date,
+			hora_creacion datetime,
+			dia_semana str,
+			codigo_cierre char,
+			fecha_cierre date,
+			año_cierre date_year,
+			mes_cierre date_month,
+			delegacion_inicio str,
+			incidente_c4 str,
+			latitud float,
+			longitud float,
+			clas_con_f_alarma enum,
+			tipo_entrada str,
+			delegación_cierre,
+			geopoint
+		}
+		* extras:{
+			codigo de cierre:
+				A-"afirmativo": incidente confirmado en el lugar de los hechos por personal de atención
+				N-"negativo": no se confirma la emergencia o no se solicita apoyo del personal de seguridad
+				I-"informativo": cuando los operadores/despachadores quiern agregar información a un caso A
+				F-"falso": se reporta una solicitud de auxilio pero al momento de llegar se identifica un hecho que requiere atención pero no corresponde con el reporte inicial
+				D-"duplicados": registros extra de los reportes que cuentan con codigo de cierre A, N o F reportados más de una vez.
+			incidentes reales: código de cierre A o I
+		}
+
+	-* Contador de Ciclistas [https://datos.cdmx.gob.mx/explore/dataset/contador-ciclistas/]
+		* descripción: Contador de ciclistas que circulan por las ciclovías de Reforma, Revolución y Patriotismo por día, mes y año desde 2013.
+		* campos {
+			dia de la semana,
+			dia,
+			mes,
+			año,
+			contador ruta reforma 222,
+			contador ruta revolución,
+			contador ruta patriotismo			
+		}
+
+	*- Ciclovias [https://datos.cdmx.gob.mx/explore/dataset/ciclovias/]
+		* descripción: Infraestructura ciclista (ciclovías) de la Ciudad de México.
+		* campos: {
+			geometry geo_shape,
+			geo_point_2d,
+		}
+
+	- Reportes siniestros viales C5 [https://datos.cdmx.gob.mx/explore/dataset/reportes-de-siniestros-viales-c5/]
+		* descripcion:  incidentes viales registrados diariamente por el C5 captados por sus distintos tipos de entrada. El periodo de tiempo de la serie es de 2014 a julio de 2018. se determinó que su grado de certidumbre no es consistente con los registros diarios del C5 referentes a incidentes viales en la ciudad.
+	
+	- Estaciones de Ecobici [https://datos.cdmx.gob.mx/explore/dataset/estaciones-de-ecobici/]
+		* descripción: Ubicación geográfica de las estaciones de Ecobici en la Ciudad de México.
+		* campos: {
+			id,
+			nombre,
+			direccioń,
+			número,
+			codigo postal,
+			colonia,
+			tipo de estación
+		}
+		* extras:
+			- nombre y dirección parecen ser lo mismo
+
+3. Justicia y seguridad
+	- Carpetas de investigación PGJ de la Ciudad de México [https://datos.cdmx.gob.mx/explore/dataset/carpetas-de-investigacion-pgj-de-la-ciudad-de-mexico/]
+	- Víctimas en carpetas de investigación [https://datos.cdmx.gob.mx/explore/dataset/denuncias-victimas-pgj/]
+	- Reporte de servicios y remisiones a los juzgados cívicos [https://datos.cdmx.gob.mx/explore/dataset/reporte-mensual-de-servicios-y-remisiones-a-los-juzgados-civicos/]
+	- Remisiones al ministerio público por  alcaldía [https://datos.cdmx.gob.mx/explore/dataset/remisiones-al-ministerio-publico-por-alcaldia/]
+	- Remisiones al juez cívico por falta administrativa [https://datos.cdmx.gob.mx/explore/dataset/remisiones-al-juez-civico-por-falta-administrativa/]
+	- Personas detenidas en flagrancia y puestas a disposición del MP [https://datos.cdmx.gob.mx/explore/dataset/personas-detenidas-en-flagrancia-y-puestas-a-disposicion-del-ministerio-publico/]
+	- Eventos o emergencias atendidos [https://datos.cdmx.gob.mx/explore/dataset/eventos-o-emergencias-atendidos/]
+	- Registro de mujeres en situación de violencia de género [https://datos.cdmx.gob.mx/explore/dataset/registros-de-mujeres-en-situacion-de-violencia-de-genero/]
+	- Distribución de cámaras en la zona central de abasto [https://datos.cdmx.gob.mx/explore/dataset/distribucion-de-camaras-en-la-zona-de-la-central-de-abasto/]
+	- 
+
+4. Educación, ciencia y tecnología
+	- Escuelas públicas [https://datos.cdmx.gob.mx/explore/dataset/escuelas-publicas/]
+
+5. Salud
+	- Hospitales y centros de salud [https://datos.cdmx.gob.mx/explore/dataset/hospitales-y-centros-de-salud/]
+	- Economías y turismo en el centro histórico [https://datos.cdmx.gob.mx/explore/dataset/economia-y-turismo-en-el-centro-historico/]
