@@ -12,7 +12,7 @@ click-plugins==1.1.1
 cligj==0.5.0
 colorlog==4.0.2
 crcmod==1.7
-cryptography==2.1.4
+cryptography==3.2
 Django==1.11.17
 django-celery-results==1.0.4
 enum34==1.1.6
